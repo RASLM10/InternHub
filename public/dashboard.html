@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | InternHub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">Intern<span>Hub</span></a>
+    <div class="nav-user">
+      <div class="avatar">JD</div>
+      <span>John Doe</span>
+    </div>
+  </div>
+</nav>
+
+<div class="dashboard-layout">
+  <aside class="sidebar">
+    <div class="sidebar-profile">
+      <div class="avatar">JD</div>
+      <h3>John Doe</h3>
+      <p>Student</p>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="profile.html">Profile</a>
+      <a href="applications.html">Applications</a>
+      <a href="saved-jobs.html">Saved Jobs</a>
+      <a href="#" style="margin-top:auto;">Logout</a>
+    </nav>
+  </aside>
+
+  <main class="dashboard-main">
+    <div class="dashboard-header">
+      <h1>Welcome back, John!</h1>
+    </div>
+    
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon primary">A</div>
+        <div class="stat-details"><div class="num">12</div><h4>Applications</h4></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon warning">S</div>
+        <div class="stat-details"><div class="num">5</div><h4>Saved Jobs</h4></div>
+      </div>
+    </div>
+    
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Role</th>
+            <th>Applied Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>TechCorp</td>
+            <td>Frontend Intern</td>
+            <td>Oct 12, 2024</td>
+            <td><span class="badge badge-info">Applied</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>

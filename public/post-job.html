@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post a Job | InternHub</title>
+  <meta name="description" content="Post a new job or internship opportunity.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/cards.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/forms.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body class="dashboard-body">
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="nav-logo">Intern<span>Hub</span></a>
+      <div class="nav-links">
+        <a href="/jobs.html" class="nav-link">Jobs</a>
+        <a href="/internships.html" class="nav-link">Internships</a>
+        <a href="/companies.html" class="nav-link">Companies</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-auth" id="nav-auth">
+        <a href="/login.html" class="btn btn-outline">Login</a>
+        <a href="/register.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="/jobs.html" class="nav-link">Jobs</a>
+      <a href="/internships.html" class="nav-link">Internships</a>
+      <a href="/companies.html" class="nav-link">Companies</a>
+      <a href="/about.html" class="nav-link">About</a>
+      <a href="/contact.html" class="nav-link">Contact</a>
+      <div id="mobile-nav-auth">
+        <a href="/login.html" class="btn btn-outline">Login</a>
+        <a href="/register.html" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="dashboard-layout container my-4">
+    <aside class="sidebar">
+      <div class="sidebar-user" id="sidebar-user"></div>
+      <nav class="sidebar-nav">
+        <a href="/employer-dashboard.html" class="sidebar-link">Overview</a>
+        <a href="/post-job.html" class="sidebar-link active">Post a Job</a>
+        <a href="/applicants.html" class="sidebar-link">Applicants</a>
+        <button class="sidebar-link logout-btn" onclick="logout()">Logout</button>
+      </nav>
+    </aside>
+
+    <main class="dashboard-main">
+      <h1 class="mb-4">Post a New Opportunity</h1>
+      
+      <div class="card p-4">
+        <form id="post-job-form">
+          <div class="grid-2-col gap-3">
+            <div class="form-group">
+              <label for="title">Job Title <span class="text-danger">*</span></label>
+              <input type="text" id="title" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="company-select">Company <span class="text-danger">*</span></label>
+              <select id="company-select" class="form-control" required>
+                <!-- Loaded by JS -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="location">Location <span class="text-danger">*</span></label>
+              <input type="text" id="location" class="form-control" placeholder="e.g. Remote, Bangalore" required>
+            </div>
+            <div class="form-group">
+              <label for="jobType">Job Type</label>
+              <select id="jobType" class="form-control">
+                <option value="Full Time">Full Time</option>
+                <option value="Part Time">Part Time</option>
+                <option value="Internship">Internship</option>
+                <option value="Contract">Contract</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select id="category" class="form-control">
+                <option value="engineering">Engineering</option>
+                <option value="design">Design</option>
+                <option value="marketing">Marketing</option>
+                <option value="sales">Sales</option>
+                <option value="product">Product</option>
+                <option value="hr">HR</option>
+                <option value="finance">Finance</option>
+                <option value="operations">Operations</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="experience">Experience Level</label>
+              <select id="experience" class="form-control">
+                <option value="0-1 years">0-1 years</option>
+                <option value="1-2 years">1-2 years</option>
+                <option value="2-3 years">2-3 years</option>
+                <option value="3-5 years">3-5 years</option>
+                <option value="5+ years">5+ years</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="salaryMin">Salary Min (₹)</label>
+              <input type="number" id="salaryMin" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="salaryMax">Salary Max (₹)</label>
+              <input type="number" id="salaryMax" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="deadline">Application Deadline</label>
+              <input type="date" id="deadline" class="form-control">
+            </div>
+            <div class="form-group d-flex align-items-center">
+              <input type="checkbox" id="is-internship" class="mr-2">
+              <label for="is-internship" class="mb-0">This is an internship</label>
+            </div>
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="description">Job Description <span class="text-danger">*</span></label>
+            <textarea id="description" class="form-control" rows="5" required></textarea>
+          </div>
+
+          <div class="form-group mt-4 border-top pt-3">
+            <label>Skills Required</label>
+            <div id="skills-container" class="mb-2"></div>
+            <div class="d-flex gap-2">
+              <input type="text" id="skill-input" class="form-control w-auto" placeholder="Add skill">
+              <button type="button" class="btn btn-outline" onclick="addJobSkill()">Add</button>
+            </div>
+          </div>
+
+          <div class="form-group mt-4 border-top pt-3">
+            <label>Responsibilities</label>
+            <div id="responsibilities-container" class="mb-2"></div>
+            <button type="button" class="btn btn-outline btn-sm" id="add-responsibility-btn">Add Responsibility</button>
+          </div>
+
+          <div class="form-group mt-4 border-top pt-3">
+            <label>Requirements</label>
+            <div id="requirements-container" class="mb-2"></div>
+            <button type="button" class="btn btn-outline btn-sm" id="add-requirement-btn">Add Requirement</button>
+          </div>
+
+          <div class="form-group mt-4 border-top pt-3">
+            <label>Benefits</label>
+            <div id="benefits-container" class="mb-2"></div>
+            <button type="button" class="btn btn-outline btn-sm" id="add-benefit-btn">Add Benefit</button>
+          </div>
+
+          <button type="submit" id="submit-job-btn" class="btn btn-primary w-100 mt-4">Post Job</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom text-center">
+        <p>&copy; 2026 InternHub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/utils.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/employer.js"></script>
+</body>
+</html>

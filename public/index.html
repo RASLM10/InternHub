@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InternHub | Find Jobs & Internships in India</title>
+  <meta name="description" content="InternHub is your go-to platform for discovering jobs and internships at top companies across India. Find the opportunity. Build your future.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/hero.css">
+  <link rel="stylesheet" href="/css/cards.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar" id="main-navbar">
+  <div class="container nav-container">
+    <a href="/" class="nav-logo">Intern<span>Hub</span></a>
+    <div class="nav-links" id="nav-links">
+      <a href="/jobs.html" class="nav-link">Jobs</a>
+      <a href="/internships.html" class="nav-link">Internships</a>
+      <a href="/companies.html" class="nav-link">Companies</a>
+      <a href="/about.html" class="nav-link">About</a>
+      <a href="/contact.html" class="nav-link">Contact</a>
+    </div>
+    <div class="nav-auth" id="nav-auth">
+      <a href="/login.html" class="btn btn-outline">Login</a>
+      <a href="/register.html" class="btn btn-primary">Get Started</a>
+    </div>
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <a href="/jobs.html" class="nav-link">Jobs</a>
+    <a href="/internships.html" class="nav-link">Internships</a>
+    <a href="/companies.html" class="nav-link">Companies</a>
+    <a href="/about.html" class="nav-link">About</a>
+    <a href="/contact.html" class="nav-link">Contact</a>
+    <div id="mobile-nav-auth" style="display:flex;flex-direction:column;gap:0.5rem;margin-top:1rem;">
+      <a href="/login.html" class="btn btn-outline">Login</a>
+      <a href="/register.html" class="btn btn-primary">Get Started</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" role="banner">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Find the opportunity that <span>moves you forward.</span></h1>
+      <p class="hero-sub">Discover jobs, internships and companies that match your skills and ambitions. Join thousands of students and professionals on InternHub.</p>
+
+      <form class="hero-search" id="hero-search-form" role="search" aria-label="Job search">
+        <div class="search-input-wrap">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" id="hero-search-input" placeholder="Job title, skills, or company..." aria-label="Search jobs">
+        </div>
+        <div class="search-divider"></div>
+        <div class="search-input-wrap">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <select id="hero-location-select" aria-label="Select location">
+            <option value="">All Locations</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Pune">Pune</option>
+            <option value="Bengaluru">Bengaluru</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Remote">Remote</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary hero-search-btn">Search</button>
+      </form>
+
+      <div class="hero-ctas">
+        <a href="/jobs.html" class="btn btn-primary btn-lg">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          Find Jobs
+        </a>
+        <a href="/internships.html" class="btn btn-outline btn-lg">
+          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          Explore Internships
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== STATS ===================== -->
+<section class="section" style="padding:2rem 0;background:var(--color-surface);border-bottom:1px solid var(--color-border);">
+  <div class="container">
+    <div class="grid-4" id="stats-grid">
+      <div class="stat-card">
+        <span class="stat-number" data-target="10000">0</span>
+        <span class="stat-label">Jobs & Internships</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" data-target="5000">0</span>
+        <span class="stat-label">Partner Companies</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" data-target="50000">0</span>
+        <span class="stat-label">Students Registered</span>
+      </div>
+      <div class="stat-card" style="border-color:var(--color-primary);">
+        <span class="stat-number" style="color:var(--color-success);">95%</span>
+        <span class="stat-label">Placement Success Rate</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CATEGORIES ===================== -->
+<section class="section" id="categories-section">
+  <div class="container">
+    <h2 class="section-title">Explore by Category</h2>
+    <p class="section-subtitle">Browse thousands of roles across the most in-demand fields.</p>
+    <div class="grid-4" id="categories-grid">
+      <a href="/jobs.html?category=Software+Development" class="card category-card card-hover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+        <h3>Software Development</h3>
+      </a>
+      <a href="/jobs.html?category=Data+Science" class="card category-card card-hover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        <h3>Data Science</h3>
+      </a>
+      <a href="/jobs.html?category=UI%2FUX+Design" class="card category-card card-hover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+        <h3>UI/UX Design</h3>
+      </a>
+      <a href="/jobs.html?category=Marketing" class="card category-card card-hover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
+        <h3>Marketing</h3>
+      </a>
+      <a href="/jobs.html?category=Finance" class="card category-card card-hover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <h3>Finance</h3>
+      </a>
+      <a href="/jobs.html?category=Human+Resources" class="card category-card card-hover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <h3>Human Resources</h3>
+      </a>
+      <a href="/jobs.html?category=Product" class="card category-card card-hover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+        <h3>Product</h3>
+      </a>
+      <a href="/jobs.html?category=Cybersecurity" class="card category-card card-hover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <h3>Cybersecurity</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURED JOBS ===================== -->
+<section class="section" style="background:var(--color-background);">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;flex-wrap:wrap;gap:1rem;">
+      <div>
+        <h2 class="section-title" style="text-align:left;margin-bottom:0.25rem;">Featured Jobs</h2>
+        <p style="color:var(--color-muted);">Handpicked opportunities at top companies.</p>
+      </div>
+      <a href="/jobs.html" class="btn btn-outline">View All Jobs &rarr;</a>
+    </div>
+    <div class="grid-3" id="featured-jobs-container">
+      <!-- Loaded by main.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURED INTERNSHIPS ===================== -->
+<section class="section">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;flex-wrap:wrap;gap:1rem;">
+      <div>
+        <h2 class="section-title" style="text-align:left;margin-bottom:0.25rem;">Featured Internships</h2>
+        <p style="color:var(--color-muted);">Start your career with the right internship.</p>
+      </div>
+      <a href="/internships.html" class="btn btn-outline">View All Internships &rarr;</a>
+    </div>
+    <div class="grid-3" id="featured-internships-container">
+      <!-- Loaded by main.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section class="section" style="background:var(--color-surface);">
+  <div class="container">
+    <h2 class="section-title">How InternHub Works</h2>
+    <p class="section-subtitle">Land your dream opportunity in four simple steps.</p>
+    <div class="grid-4">
+      <div class="step-card card">
+        <div class="step-icon">
+          <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+        </div>
+        <p class="step-number">Step 01</p>
+        <h3>Create Your Profile</h3>
+        <p>Sign up and build a professional profile with your skills, education, and experience.</p>
+      </div>
+      <div class="step-card card">
+        <div class="step-icon">
+          <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </div>
+        <p class="step-number">Step 02</p>
+        <h3>Discover Opportunities</h3>
+        <p>Browse thousands of jobs and internships. Use filters to find exactly what you need.</p>
+      </div>
+      <div class="step-card card">
+        <div class="step-icon">
+          <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        </div>
+        <p class="step-number">Step 03</p>
+        <h3>Apply with Confidence</h3>
+        <p>Submit tailored applications in minutes with your resume URL and cover letter.</p>
+      </div>
+      <div class="step-card card">
+        <div class="step-icon">
+          <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <p class="step-number">Step 04</p>
+        <h3>Track Your Progress</h3>
+        <p>Monitor application statuses — Applied, Shortlisted, Interview, Selected — all in one place.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY INTERNHUB ===================== -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Why Choose InternHub?</h2>
+    <p class="section-subtitle">We make career discovery simpler, clearer, and more accessible.</p>
+    <div class="grid-4">
+      <div class="card card-hover" style="text-align:center;padding:2rem 1.5rem;">
+        <div style="width:56px;height:56px;background:var(--color-primary-light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:var(--color-primary);">
+          <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+        </div>
+        <h3 style="font-weight:700;margin-bottom:0.5rem;">Curated Opportunities</h3>
+        <p style="color:var(--color-muted);font-size:0.9rem;">Only genuine, verified job and internship listings from real companies.</p>
+      </div>
+      <div class="card card-hover" style="text-align:center;padding:2rem 1.5rem;">
+        <div style="width:56px;height:56px;background:#ede9fe;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:#7c3aed;">
+          <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3 style="font-weight:700;margin-bottom:0.5rem;">Easy Applications</h3>
+        <p style="color:var(--color-muted);font-size:0.9rem;">Apply in seconds with a simple form. No complex portals or repeated data entry.</p>
+      </div>
+      <div class="card card-hover" style="text-align:center;padding:2rem 1.5rem;">
+        <div style="width:56px;height:56px;background:#dcfce7;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:var(--color-success);">
+          <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+        </div>
+        <h3 style="font-weight:700;margin-bottom:0.5rem;">Application Tracking</h3>
+        <p style="color:var(--color-muted);font-size:0.9rem;">See live status updates from employers — shortlisted, interview, selected, and more.</p>
+      </div>
+      <div class="card card-hover" style="text-align:center;padding:2rem 1.5rem;">
+        <div style="width:56px;height:56px;background:#fef3c7;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:var(--color-warning);">
+          <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+        </div>
+        <h3 style="font-weight:700;margin-bottom:0.5rem;">Career Growth</h3>
+        <p style="color:var(--color-muted);font-size:0.9rem;">From first internship to full-time role, we're with you at every stage of your career.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EMPLOYER CTA ===================== -->
+<section class="section" style="background:var(--color-dark);color:#fff;">
+  <div class="container" style="text-align:center;max-width:700px;">
+    <h2 style="font-size:2.2rem;font-weight:800;margin-bottom:1rem;">Build your team with InternHub.</h2>
+    <p style="font-size:1.1rem;color:#9ca3af;margin-bottom:2rem;">Post jobs and internships, review applications, and hire top talent from India's growing professional community.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="/post-job.html" class="btn btn-primary btn-lg">Post a Job</a>
+      <a href="/register.html" class="btn btn-outline btn-lg" style="color:#fff;border-color:#fff;">Register as Employer</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section">
+  <div class="container" style="max-width:800px;">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-subtitle">Everything you need to know about InternHub.</p>
+
+    <div class="faq-list" id="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          How does InternHub work?
+          <svg class="faq-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer" hidden>InternHub connects students and job seekers with top employers. You create a profile, browse opportunities, and apply directly through the platform. Employers review your application and update the status in real-time.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Can students apply for internships?
+          <svg class="faq-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer" hidden>Absolutely! InternHub is built for students and early-career professionals. Register as a Student, browse internships, and apply with just your resume link and a cover letter.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Can companies post jobs on InternHub?
+          <svg class="faq-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer" hidden>Yes. Register as an Employer, create your company profile, and post jobs or internships. You can manage listings, view applicants, and update application statuses all from your Employer Dashboard.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          How can I track my applications?
+          <svg class="faq-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer" hidden>Once logged in as a student, go to your Dashboard and click on "Applications". You will see all your applications with their current status: Applied, Shortlisted, Interview, Rejected, or Selected.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Is InternHub free for students?
+          <svg class="faq-arrow" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer" hidden>Yes, InternHub is completely free for students and job seekers. Register, build your profile, and apply to unlimited opportunities at no cost.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="section" style="background:linear-gradient(135deg,var(--color-primary) 0%,var(--color-secondary) 100%);color:#fff;text-align:center;">
+  <div class="container">
+    <h2 style="font-size:2.5rem;font-weight:800;margin-bottom:1rem;">Your next opportunity starts here.</h2>
+    <p style="font-size:1.1rem;color:rgba(255,255,255,0.85);margin-bottom:2rem;">Join thousands of students already discovering their future on InternHub.</p>
+    <a href="/register.html" class="btn btn-lg" style="background:#fff;color:var(--color-primary);font-weight:700;">Get Started — It's Free</a>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" style="font-size:1.5rem;">Intern<span>Hub</span></a>
+        <p>Find the opportunity.<br>Build your future.</p>
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn" class="social-icon">in</a>
+          <a href="#" aria-label="GitHub" class="social-icon">gh</a>
+          <a href="#" aria-label="Instagram" class="social-icon">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="/jobs.html">Browse Jobs</a></li>
+          <li><a href="/internships.html">Internships</a></li>
+          <li><a href="/companies.html">Companies</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>For Candidates</h4>
+        <ul>
+          <li><a href="/dashboard.html">Dashboard</a></li>
+          <li><a href="/applications.html">My Applications</a></li>
+          <li><a href="/saved-jobs.html">Saved Jobs</a></li>
+          <li><a href="/profile.html">My Profile</a></li>
+          <li><a href="/register.html">Register</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>For Employers</h4>
+        <ul>
+          <li><a href="/post-job.html">Post a Job</a></li>
+          <li><a href="/employer-dashboard.html">Employer Dashboard</a></li>
+          <li><a href="/applicants.html">View Applicants</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@internhub.example">hello@internhub.example</a></li>
+          <li><a href="mailto:support@internhub.example">support@internhub.example</a></li>
+          <li><a href="/contact.html">Contact Form</a></li>
+        </ul>
+        <p style="font-size:0.75rem;color:#9ca3af;margin-top:0.75rem;">* Placeholder emails for assignment purposes only.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="footer-year">2026</span> InternHub. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/utils.js"></script>
+<script src="/js/main.js"></script>
+<script>
+  // FAQ Accordion
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const answer = btn.nextElementSibling;
+      const isOpen = !answer.hidden;
+      // Close all
+      document.querySelectorAll('.faq-answer').forEach(a => a.hidden = true);
+      document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+      document.querySelectorAll('.faq-arrow').forEach(a => a.style.transform = '');
+      // Open clicked
+      if (!isOpen) {
+        answer.hidden = false;
+        btn.setAttribute('aria-expanded', 'true');
+        btn.querySelector('.faq-arrow').style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+
+  // Footer year
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+  // Hero search form
+  document.getElementById('hero-search-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const q = document.getElementById('hero-search-input').value.trim();
+    const loc = document.getElementById('hero-location-select').value;
+    const params = new URLSearchParams();
+    if (q) params.set('search', q);
+    if (loc) params.set('location', loc);
+    window.location.href = '/jobs.html?' + params.toString();
+  });
+
+  // Animated counters
+  function animateCounter(el) {
+    const target = parseInt(el.getAttribute('data-target'));
+    if (!target) return;
+    let current = 0;
+    const increment = target / 60;
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) { current = target; clearInterval(timer); }
+      el.textContent = Math.floor(current).toLocaleString('en-IN') + '+';
+    }, 20);
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.stat-number[data-target]').forEach(animateCounter);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  const statsGrid = document.getElementById('stats-grid');
+  if (statsGrid) observer.observe(statsGrid);
+</script>
+</body>
+</html>

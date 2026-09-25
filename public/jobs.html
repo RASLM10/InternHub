@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs | InternHub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">Intern<span>Hub</span></a>
+    <div class="nav-links">
+      <a href="jobs.html" class="nav-link active">Jobs</a>
+      <a href="internships.html" class="nav-link">Internships</a>
+      <a href="companies.html" class="nav-link">Companies</a>
+    </div>
+    <div class="nav-auth">
+      <a href="login.html" class="btn btn-outline">Login</a>
+      <a href="register.html" class="btn btn-primary">Register</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container section">
+  <div style="display:grid; grid-template-columns: 260px 1fr; gap: 2rem;" id="jobs-layout">
+    <aside class="filters-sidebar card">
+      <h3 style="margin-bottom: 1rem;">Filters</h3>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search jobs...">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Location</label>
+        <select class="form-control"><option>All</option></select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Job Type</label>
+        <div class="checkbox-group"><input type="checkbox"> Full Time</div>
+        <div class="checkbox-group"><input type="checkbox"> Part Time</div>
+      </div>
+      <button class="btn btn-outline" style="width:100%">Clear Filters</button>
+    </aside>
+    
+    <main>
+      <div class="flex justify-between items-center" style="margin-bottom: 1rem;">
+        <p>Showing 12 jobs</p>
+        <select class="form-control" style="width:auto;"><option>Newest First</option></select>
+      </div>
+      <div id="jobs-container" class="grid-2">
+        <!-- Job cards populated via JS -->
+      </div>
+    </main>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container"><div class="footer-bottom"><p>&copy; 2024 InternHub.</p></div></div>
+</footer>
+
+</body>
+</html>

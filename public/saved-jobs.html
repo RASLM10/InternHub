@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saved Jobs | InternHub</title>
+  <meta name="description" content="View your saved jobs on InternHub.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/cards.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/forms.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body class="dashboard-body">
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="nav-logo">Intern<span>Hub</span></a>
+      <div class="nav-links">
+        <a href="/jobs.html" class="nav-link">Jobs</a>
+        <a href="/internships.html" class="nav-link">Internships</a>
+        <a href="/companies.html" class="nav-link">Companies</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-auth" id="nav-auth">
+        <a href="/login.html" class="btn btn-outline">Login</a>
+        <a href="/register.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="/jobs.html" class="nav-link">Jobs</a>
+      <a href="/internships.html" class="nav-link">Internships</a>
+      <a href="/companies.html" class="nav-link">Companies</a>
+      <a href="/about.html" class="nav-link">About</a>
+      <a href="/contact.html" class="nav-link">Contact</a>
+      <div id="mobile-nav-auth">
+        <a href="/login.html" class="btn btn-outline">Login</a>
+        <a href="/register.html" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="dashboard-layout container my-4">
+    <aside class="sidebar">
+      <div class="sidebar-user" id="sidebar-user"></div>
+      <nav class="sidebar-nav">
+        <a href="/dashboard.html" class="sidebar-link">Dashboard</a>
+        <a href="/profile.html" class="sidebar-link">My Profile</a>
+        <a href="/applications.html" class="sidebar-link">Applications</a>
+        <a href="/saved-jobs.html" class="sidebar-link active">Saved Jobs</a>
+        <button class="sidebar-link logout-btn" onclick="logout()">Logout</button>
+      </nav>
+    </aside>
+
+    <main class="dashboard-main">
+      <h1 class="mb-2">Saved Jobs</h1>
+      <p class="text-muted mb-4">Jobs you've bookmarked for later.</p>
+      
+      <div id="saved-jobs-container" class="grid-list">
+        <!-- Rendered by JS -->
+        <p>Loading saved jobs...</p>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom text-center">
+        <p>&copy; 2026 InternHub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/utils.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/saved-jobs.js"></script>
+</body>
+</html>

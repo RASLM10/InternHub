@@ -1,5 +1,29 @@
+<<<<<<< HEAD
 node_modules/
 .env
 .vercel/
 npm-debug.log
 .DS_Store
+=======
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Vercel & Deployment
+.vercel/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+>>>>>>> 388a84939b4d0f3815b7eaa74104314a1a096ae0
