@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Details | InternHub</title>
+  <meta name="description" content="View job details on InternHub">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/cards.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/forms.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="nav-logo">Intern<span>Hub</span></a>
+      <div class="nav-links">
+        <a href="/jobs.html" class="nav-link">Jobs</a>
+        <a href="/internships.html" class="nav-link">Internships</a>
+        <a href="/companies.html" class="nav-link">Companies</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-auth" id="nav-auth">
+        <a href="/login.html" class="btn btn-outline">Login</a>
+        <a href="/register.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="/jobs.html" class="nav-link">Jobs</a>
+      <a href="/internships.html" class="nav-link">Internships</a>
+      <a href="/companies.html" class="nav-link">Companies</a>
+      <a href="/about.html" class="nav-link">About</a>
+      <a href="/contact.html" class="nav-link">Contact</a>
+      <div id="mobile-nav-auth">
+        <a href="/login.html" class="btn btn-outline">Login</a>
+        <a href="/register.html" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+    <div class="breadcrumb mb-3">
+      <a href="/">Home</a> &gt; <a href="/jobs.html">Jobs</a> &gt; <span id="breadcrumb-job-title">Job Title</span>
+    </div>
+
+    <div class="grid-8-4">
+      <div class="col-8">
+        <div id="job-header" class="card p-4 mb-4">
+          <!-- Filled by JS -->
+          <p>Loading job details...</p>
+        </div>
+
+        <section class="card p-4 mb-4">
+          <h3>About This Role</h3>
+          <div id="job-description" class="mt-2 text-content"></div>
+        </section>
+
+        <section class="card p-4 mb-4">
+          <h3>Responsibilities</h3>
+          <ul id="job-responsibilities" class="styled-list mt-2"></ul>
+        </section>
+
+        <section class="card p-4 mb-4">
+          <h3>Requirements</h3>
+          <ul id="job-requirements" class="styled-list mt-2"></ul>
+        </section>
+
+        <section class="card p-4 mb-4">
+          <h3>Benefits</h3>
+          <div id="job-benefits" class="mt-2 text-content"></div>
+        </section>
+      </div>
+
+      <div class="col-4">
+        <div class="sticky-sidebar">
+          <div id="apply-section" class="card p-4 mb-4 text-center">
+            <h4>Ready to apply?</h4>
+            <button id="apply-btn" class="btn btn-primary w-100 mt-2">Apply Now</button>
+            <button id="save-btn" class="btn btn-outline w-100 mt-2">Save for Later</button>
+          </div>
+
+          <div id="company-info" class="card p-4">
+            <!-- Filled by JS -->
+            <h4>About the Company</h4>
+            <p>Loading company details...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo">Intern<span>Hub</span></a>
+          <p>Find the opportunity. Build your future.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn" class="social-icon">in</a>
+            <a href="#" aria-label="GitHub" class="social-icon">gh</a>
+            <a href="#" aria-label="Instagram" class="social-icon">ig</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="/jobs.html">Browse Jobs</a></li>
+            <li><a href="/internships.html">Internships</a></li>
+            <li><a href="/companies.html">Companies</a></li>
+            <li><a href="/about.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>For Candidates</h4>
+          <ul>
+            <li><a href="/dashboard.html">Dashboard</a></li>
+            <li><a href="/applications.html">My Applications</a></li>
+            <li><a href="/saved-jobs.html">Saved Jobs</a></li>
+            <li><a href="/profile.html">My Profile</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>For Employers</h4>
+          <ul>
+            <li><a href="/post-job.html">Post a Job</a></li>
+            <li><a href="/employer-dashboard.html">Employer Dashboard</a></li>
+            <li><a href="/applicants.html">View Applicants</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@internhub.example">hello@internhub.example</a></li>
+            <li><a href="mailto:support@internhub.example">support@internhub.example</a></li>
+            <li><a href="/contact.html">Contact Form</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 InternHub. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/utils.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/job-details.js"></script>
+</body>
+</html>

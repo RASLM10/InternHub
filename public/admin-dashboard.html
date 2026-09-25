@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | InternHub</title>
+  <meta name="description" content="Admin Dashboard for InternHub.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/cards.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/forms.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body class="dashboard-body">
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="nav-logo">Intern<span>Hub</span></a>
+      <div class="nav-links">
+        <a href="/jobs.html" class="nav-link">Jobs</a>
+        <a href="/internships.html" class="nav-link">Internships</a>
+        <a href="/companies.html" class="nav-link">Companies</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-auth" id="nav-auth">
+        <a href="/login.html" class="btn btn-outline">Login</a>
+        <a href="/register.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="/jobs.html" class="nav-link">Jobs</a>
+      <a href="/internships.html" class="nav-link">Internships</a>
+      <a href="/companies.html" class="nav-link">Companies</a>
+      <a href="/about.html" class="nav-link">About</a>
+      <a href="/contact.html" class="nav-link">Contact</a>
+      <div id="mobile-nav-auth">
+        <a href="/login.html" class="btn btn-outline">Login</a>
+        <a href="/register.html" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="dashboard-layout container my-4" style="grid-template-columns: 250px 1fr;">
+    <aside class="sidebar">
+      <div class="sidebar-user" id="sidebar-user"></div>
+      <nav class="sidebar-nav">
+        <a href="/admin-dashboard.html" class="sidebar-link active">Dashboard</a>
+        <button class="sidebar-link logout-btn" onclick="logout()">Logout</button>
+      </nav>
+    </aside>
+
+    <main class="dashboard-main">
+      <h1 class="mb-4">Admin Dashboard</h1>
+      
+      <div id="admin-stats" class="grid-4 mb-5">
+        <div class="card p-3 text-center">
+          <h3 id="stat-users">0</h3>
+          <p class="text-muted">Total Users</p>
+        </div>
+        <div class="card p-3 text-center">
+          <h3 id="stat-jobs">0</h3>
+          <p class="text-muted">Total Jobs</p>
+        </div>
+        <div class="card p-3 text-center">
+          <h3 id="stat-apps">0</h3>
+          <p class="text-muted">Total Applications</p>
+        </div>
+        <div class="card p-3 text-center">
+          <h3 id="stat-companies">0</h3>
+          <p class="text-muted">Total Companies</p>
+        </div>
+      </div>
+
+      <div class="card p-4">
+        <div class="tabs mb-4 border-bottom">
+          <button class="btn btn-link px-3 active" onclick="switchTab('users')">Users</button>
+          <button class="btn btn-link px-3" onclick="switchTab('jobs')">Jobs</button>
+          <button class="btn btn-link px-3" onclick="switchTab('companies')">Companies</button>
+        </div>
+
+        <div id="admin-users-section">
+          <h3>Manage Users</h3>
+          <div class="table-responsive mt-3">
+            <table class="w-100 text-left">
+              <thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Actions</th></tr></thead>
+              <tbody id="admin-users-table"><tr><td colspan="4">Loading...</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="admin-jobs-section" style="display:none">
+          <h3>Manage Jobs</h3>
+          <div class="table-responsive mt-3">
+            <table class="w-100 text-left">
+              <thead><tr><th>Title</th><th>Company</th><th>Status</th><th>Actions</th></tr></thead>
+              <tbody id="admin-jobs-table"><tr><td colspan="4">Loading...</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="admin-companies-section" style="display:none">
+          <h3>Manage Companies</h3>
+          <div class="table-responsive mt-3">
+            <table class="w-100 text-left">
+              <thead><tr><th>Name</th><th>Industry</th><th>Actions</th></tr></thead>
+              <tbody id="admin-companies-table"><tr><td colspan="3">Loading...</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom text-center">
+        <p>&copy; 2026 InternHub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/utils.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/admin.js"></script>
+  <script>
+    function switchTab(tab) {
+      document.getElementById('admin-users-section').style.display = 'none';
+      document.getElementById('admin-jobs-section').style.display = 'none';
+      document.getElementById('admin-companies-section').style.display = 'none';
+      
+      const buttons = document.querySelectorAll('.tabs button');
+      buttons.forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      document.getElementById(`admin-${tab}-section`).style.display = 'block';
+    }
+  </script>
+</body>
+</html>

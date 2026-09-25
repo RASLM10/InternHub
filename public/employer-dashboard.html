@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employer Dashboard | InternHub</title>
+  <meta name="description" content="Employer Dashboard on InternHub.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/cards.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/forms.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body class="dashboard-body">
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="nav-logo">Intern<span>Hub</span></a>
+      <div class="nav-links">
+        <a href="/jobs.html" class="nav-link">Jobs</a>
+        <a href="/internships.html" class="nav-link">Internships</a>
+        <a href="/companies.html" class="nav-link">Companies</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-auth" id="nav-auth">
+        <a href="/login.html" class="btn btn-outline">Login</a>
+        <a href="/register.html" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="/jobs.html" class="nav-link">Jobs</a>
+      <a href="/internships.html" class="nav-link">Internships</a>
+      <a href="/companies.html" class="nav-link">Companies</a>
+      <a href="/about.html" class="nav-link">About</a>
+      <a href="/contact.html" class="nav-link">Contact</a>
+      <div id="mobile-nav-auth">
+        <a href="/login.html" class="btn btn-outline">Login</a>
+        <a href="/register.html" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="dashboard-layout container my-4">
+    <aside class="sidebar">
+      <div class="sidebar-user" id="sidebar-user"></div>
+      <nav class="sidebar-nav">
+        <a href="/employer-dashboard.html" class="sidebar-link active">Overview</a>
+        <a href="/post-job.html" class="sidebar-link">Post a Job</a>
+        <a href="/applicants.html" class="sidebar-link">Applicants</a>
+        <button class="sidebar-link logout-btn" onclick="logout()">Logout</button>
+      </nav>
+    </aside>
+
+    <main class="dashboard-main">
+      <h1 class="mb-4">Employer Dashboard</h1>
+      
+      <div id="employer-welcome" class="mb-4">
+        <h2>Welcome back!</h2>
+      </div>
+
+      <div class="grid-3 mb-5" id="employer-stats">
+        <div class="card p-4 text-center">
+          <h3 class="stat-num">0</h3>
+          <p class="text-muted">Active Jobs</p>
+        </div>
+        <div class="card p-4 text-center">
+          <h3 class="stat-num">0</h3>
+          <p class="text-muted">Total Applicants</p>
+        </div>
+        <div class="card p-4 text-center">
+          <h3 class="stat-num">0</h3>
+          <p class="text-muted">New Applications</p>
+        </div>
+      </div>
+
+      <section class="mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2>Quick Actions</h2>
+        </div>
+        <div class="d-flex gap-3">
+          <a href="/post-job.html" class="btn btn-primary">Post New Job</a>
+          <a href="/applicants.html" class="btn btn-outline">View Applicants</a>
+          <button class="btn btn-outline" onclick="document.getElementById('company-form-section').scrollIntoView()">Edit Company Profile</button>
+        </div>
+      </section>
+
+      <section class="mb-5">
+        <h2 class="mb-3">My Job Listings</h2>
+        <div id="employer-jobs-container">
+          <p>Loading jobs...</p>
+        </div>
+      </section>
+
+      <section id="company-form-section" class="card p-4">
+        <h2 class="mb-4 border-bottom pb-2">Company Profile</h2>
+        <form id="company-form">
+          <div class="grid-2-col gap-3">
+            <div class="form-group">
+              <label for="companyName">Company Name</label>
+              <input type="text" id="companyName" name="companyName" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="industry">Industry</label>
+              <select id="industry" name="industry" class="form-control" required>
+                <option value="Technology">Technology</option>
+                <option value="Finance">Finance</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Education">Education</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="location">Location</label>
+              <input type="text" id="location" name="location" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="website">Website</label>
+              <input type="url" id="website" name="website" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="companySize">Company Size</label>
+              <select id="companySize" name="companySize" class="form-control">
+                <option value="1-10">1-10 employees</option>
+                <option value="11-50">11-50 employees</option>
+                <option value="51-200">51-200 employees</option>
+                <option value="201-500">201-500 employees</option>
+                <option value="500+">500+ employees</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="foundedYear">Founded Year</label>
+              <input type="number" id="foundedYear" name="foundedYear" class="form-control">
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <label for="description">Company Description</label>
+            <textarea id="description" name="description" class="form-control" rows="5"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary mt-3">Save Company</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom text-center">
+        <p>&copy; 2026 InternHub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/utils.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/employer.js"></script>
+</body>
+</html>
