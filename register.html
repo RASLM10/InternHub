@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Internhub | Create Account</title>
+<meta name="description" content="Create your Internhub account as a student or employer." />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/navbar.css" />
+<link rel="stylesheet" href="css/footer.css" />
+<link rel="stylesheet" href="css/forms.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body data-page="register">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <section class="section" style="padding-top:3rem">
+    <div class="container">
+      <div class="form-card">
+        <h1>Create your account</h1>
+        <p class="lede">Join as a student to apply, or as an employer to hire.</p>
+
+        <div id="form-banner" class="form-banner"></div>
+
+        <form id="register-form" novalidate>
+          <fieldset style="border:none;padding:0;margin:0 0 1.25rem">
+            <legend class="field-hint" style="margin-bottom:0.5rem;font-weight:600;color:var(--color-ink)">I am a</legend>
+            <div class="role-select">
+              <label class="role-option is-active">
+                <input type="radio" name="role" value="student" checked />
+                <strong>Student</strong><span>Looking for jobs/internships</span>
+              </label>
+              <label class="role-option">
+                <input type="radio" name="role" value="employer" />
+                <strong>Employer</strong><span>Hiring for my company</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="password-wrap">
+              <input type="password" id="password" required minlength="8" autocomplete="new-password" />
+              <button type="button" class="toggle-password" data-toggle-password="password">Show</button>
+            </div>
+            <p class="field-hint">Minimum 8 characters.</p>
+          </div>
+          <div class="field">
+            <label for="confirm-password">Confirm password</label>
+            <div class="password-wrap">
+              <input type="password" id="confirm-password" required minlength="8" autocomplete="new-password" />
+              <button type="button" class="toggle-password" data-toggle-password="confirm-password">Show</button>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Create account</button>
+        </form>
+
+        <div class="form-foot">Already have an account? <a href="login.html">Log in</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

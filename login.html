@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Internhub | Log In</title>
+<meta name="description" content="Log in to your Internhub account." />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/navbar.css" />
+<link rel="stylesheet" href="css/footer.css" />
+<link rel="stylesheet" href="css/forms.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body data-page="login">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <section class="section" style="padding-top:3rem">
+    <div class="container">
+      <div class="form-card">
+        <h1>Welcome back</h1>
+        <p class="lede">Log in to manage your applications and saved jobs.</p>
+
+        <div id="form-banner" class="form-banner"></div>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="password-wrap">
+              <input type="password" id="password" required autocomplete="current-password" />
+              <button type="button" class="toggle-password" data-toggle-password="password">Show</button>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem">
+            <label class="checkbox-field"><input type="checkbox" id="remember" /> <span>Remember me</span></label>
+            <a href="#" id="forgot-link" style="font-size:0.85rem">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Log in</button>
+        </form>
+
+        <div class="form-foot">Don't have an account? <a href="register.html">Create one</a></div>
+
+        <div class="dash-panel" style="margin-top:1.75rem">
+          <h3 style="font-size:0.9rem">Try a demo account</h3>
+          <p class="field-hint" style="margin-bottom:0.75rem">For evaluating this assignment only — not real credentials.</p>
+          <button type="button" class="btn btn-outline btn-sm btn-block" style="margin-bottom:0.5rem" data-demo-login data-email="student@internhub.demo" data-password="student123">Fill student demo login</button>
+          <button type="button" class="btn btn-outline btn-sm btn-block" data-demo-login data-email="employer@internhub.demo" data-password="employer123">Fill employer demo login</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

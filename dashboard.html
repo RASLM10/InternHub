@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Internhub | Dashboard</title>
+<meta name="description" content="Your Internhub student dashboard." />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/navbar.css" />
+<link rel="stylesheet" href="css/footer.css" />
+<link rel="stylesheet" href="css/cards.css" />
+<link rel="stylesheet" href="css/dashboard.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body data-page="dashboard">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <div class="container" id="dashboard-root">
+    <div class="dash-layout">
+      <aside class="dash-sidebar">
+        <div class="dash-user">
+          <span class="logo-chip" style="border-radius:50%">You</span>
+          <div><strong>Student</strong><span>Student account</span></div>
+        </div>
+        <ul class="dash-nav">
+          <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+          <li><a href="jobs.html">Browse jobs</a></li>
+          <li><a href="internships.html">Browse internships</a></li>
+          <hr class="divider" />
+          <li><a href="index.html" id="sidebar-logout">Log out</a></li>
+        </ul>
+      </aside>
+
+      <div class="dash-main">
+        <h1>Welcome, <span id="welcome-name">there</span></h1>
+        <p class="text-muted">Here's what's happening with your job search.</p>
+
+        <div class="dash-stats">
+          <div class="stat-card"><div class="stat-value" id="stat-applications">0</div><div class="stat-label">Applications</div></div>
+          <div class="stat-card"><div class="stat-value" id="stat-saved">0</div><div class="stat-label">Saved jobs</div></div>
+          <div class="stat-card"><div class="stat-value" id="stat-interview">0</div><div class="stat-label">Interviews</div></div>
+          <div class="stat-card"><div class="stat-value" id="stat-selected">0</div><div class="stat-label">Selected</div></div>
+        </div>
+
+        <div class="dash-panel">
+          <div class="dash-panel-head"><h2>Profile completion</h2><span id="profile-progress-text" class="text-muted"></span></div>
+          <div class="progress-track"><div class="progress-fill" id="profile-progress-fill" style="width:0%"></div></div>
+        </div>
+
+        <div class="dash-panel">
+          <div class="dash-panel-head"><h2>Recent applications</h2></div>
+          <div id="recent-applications"></div>
+        </div>
+
+        <div class="dash-panel">
+          <div class="dash-panel-head"><h2>Recommended for you</h2></div>
+          <div class="grid grid-3" id="recommended-jobs"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/jobcard.js"></script>
+<script src="js/main.js"></script>
+<script src="js/dashboard.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const link = document.getElementById("sidebar-logout");
+    if (link) link.addEventListener("click", (e) => { e.preventDefault(); logoutUser(); });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Internhub | Find Jobs & Internships</title>
+<meta name="description" content="Internhub helps students and early-career professionals discover jobs and internships that match their skills." />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/navbar.css" />
+<link rel="stylesheet" href="css/footer.css" />
+<link rel="stylesheet" href="css/hero.css" />
+<link rel="stylesheet" href="css/cards.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body data-page="home">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Built for students &amp; early careers</p>
+        <h1>Find the opportunity that moves you forward.</h1>
+        <p class="lede">Discover jobs, internships and companies that match your skills and ambitions — all in one place.</p>
+
+        <div class="search-ticket">
+          <form id="hero-search-form">
+            <div class="ticket-field">
+              <label for="hero-search">What</label>
+              <input type="text" id="hero-search" name="search" placeholder="Job title, skills or company" />
+            </div>
+            <div class="ticket-divider"></div>
+            <div class="ticket-field">
+              <label for="hero-location">Where</label>
+              <select id="hero-location" name="location">
+                <option value="">Any location</option>
+                <option>Mumbai</option><option>Pune</option><option>Bengaluru</option>
+                <option>Hyderabad</option><option>Delhi</option><option>Chennai</option><option>Remote</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+          </form>
+        </div>
+
+        <div class="hero-ctas">
+          <a class="btn btn-on-dark" href="jobs.html">Find jobs</a>
+          <a class="btn btn-outline-on-dark" href="internships.html">Explore internships</a>
+        </div>
+        <div class="hero-tags">
+          <span style="color:#8A9489">Popular:</span>
+          <a href="jobs.html?search=java" style="background:transparent;border-color:rgba(255,255,255,0.2);color:#D7DBD5">Java</a>
+          <a href="jobs.html?search=react" style="background:transparent;border-color:rgba(255,255,255,0.2);color:#D7DBD5">React</a>
+          <a href="internships.html?category=Data%20Science" style="background:transparent;border-color:rgba(255,255,255,0.2);color:#D7DBD5">Data Science</a>
+          <a href="jobs.html?location=Remote" style="background:transparent;border-color:rgba(255,255,255,0.2);color:#D7DBD5">Remote</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="420" height="380" rx="24" fill="#141A15"/>
+          <g opacity="0.9">
+            <rect x="60" y="230" width="36" height="90" rx="6" fill="#2C4433"/>
+            <rect x="118" y="180" width="36" height="140" rx="6" fill="#3C5C46"/>
+            <rect x="176" y="130" width="36" height="190" rx="6" fill="#4E7A5A"/>
+            <rect x="234" y="90" width="36" height="230" rx="6" fill="#C6FF5E"/>
+            <rect x="292" y="150" width="36" height="170" rx="6" fill="#4E7A5A"/>
+          </g>
+          <polyline points="70,225 136,175 194,125 252,85 310,145" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="252" cy="85" r="7" fill="#C6FF5E"/>
+          <circle cx="60" cy="60" r="3" fill="#8A9489"/>
+          <circle cx="90" cy="45" r="3" fill="#8A9489"/>
+          <circle cx="350" cy="60" r="3" fill="#8A9489"/>
+        </svg>
+        <div class="chip">1,200+ live opportunities</div>
+      </div>
+    </div>
+
+    <div class="container hero-band">
+      <div class="stat-band">
+        <div class="stat-band-item"><span class="num">1.2k+</span><span class="label">Open roles this month</span></div>
+        <div class="stat-band-item"><span class="num">300+</span><span class="label">Companies hiring</span></div>
+        <div class="stat-band-item"><span class="num">40k+</span><span class="label">Students on Internhub</span></div>
+        <div class="stat-band-item"><span class="num">18</span><span class="label">Cities covered</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="categories-heading">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Browse by category</p>
+        <h2 id="categories-heading">Popular categories</h2>
+      </div>
+      <div class="grid grid-4" id="categories-grid"></div>
+    </div>
+  </section>
+
+  <section class="section section--muted" aria-labelledby="featured-jobs-heading">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Fresh roles</p>
+        <h2 id="featured-jobs-heading">Featured jobs</h2>
+      </div>
+      <div class="grid grid-3" id="featured-jobs"></div>
+      <p class="center" style="margin-top:2rem"><a class="btn btn-outline" href="jobs.html">View all jobs</a></p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="featured-internships-heading">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Start here</p>
+        <h2 id="featured-internships-heading">Featured internships</h2>
+      </div>
+      <div class="grid grid-3" id="featured-internships"></div>
+      <p class="center" style="margin-top:2rem"><a class="btn btn-outline" href="internships.html">View all internships</a></p>
+    </div>
+  </section>
+
+  <section class="section section--muted" aria-labelledby="how-heading">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <p class="eyebrow">The process</p>
+        <h2 id="how-heading">How Internhub works</h2>
+      </div>
+      <div class="grid grid-4">
+        <div class="step-card"><div class="step-num">1</div><h3>Create your profile</h3><p class="text-muted">Add your skills, education and resume so employers see the right you.</p></div>
+        <div class="step-card"><div class="step-num">2</div><h3>Discover opportunities</h3><p class="text-muted">Search and filter jobs and internships that match what you want.</p></div>
+        <div class="step-card"><div class="step-num">3</div><h3>Apply with confidence</h3><p class="text-muted">Submit tailored applications in a couple of clicks.</p></div>
+        <div class="step-card"><div class="step-num">4</div><h3>Track your progress</h3><p class="text-muted">Follow every application from applied to selected.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Why Internhub</p>
+        <h2 id="why-heading">Built for early careers</h2>
+      </div>
+      <div class="grid grid-4">
+        <div class="feature-card"><div class="icon">✓</div><h3>Curated opportunities</h3><p class="text-muted">Real roles from companies actively hiring students and juniors.</p></div>
+        <div class="feature-card"><div class="icon">⚡</div><h3>Easy applications</h3><p class="text-muted">Apply with your saved profile — no repeated forms.</p></div>
+        <div class="feature-card"><div class="icon">◔</div><h3>Application tracking</h3><p class="text-muted">See exactly where each application stands.</p></div>
+        <div class="feature-card"><div class="icon">↗</div><h3>Career growth</h3><p class="text-muted">Build experience with roles suited to where you are now.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ink" aria-labelledby="community-heading">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Community</p>
+        <h2 id="community-heading">Students who found their next step here</h2>
+      </div>
+      <div class="grid grid-3">
+        <article class="testimonial-card">
+          <p>"I applied to a frontend internship on a Monday and had an interview by Thursday. Tracking status from the dashboard made follow-ups easy."</p>
+          <div class="testimonial-person">
+            <span class="avatar-circle" style="background:#C6FF5E">AR</span>
+            <div><strong>Ananya Rao</strong><span>Frontend Intern, NovaTech</span></div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <p>"The filters actually work the way you'd expect — location, experience, category. I found three relevant roles in one search."</p>
+          <div class="testimonial-person">
+            <span class="avatar-circle" style="background:#8FBE2E">SK</span>
+            <div><strong>Sanya Kapoor</strong><span>Data Analyst, BrightLabs</span></div>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <p>"As a hiring manager, posting a role and seeing applicants come in with resumes and cover letters attached saved us real time."</p>
+          <div class="testimonial-person">
+            <span class="avatar-circle" style="background:#4E7A5A;color:#fff">RM</span>
+            <div><strong>Rahul Mehta</strong><span>Hiring Lead, CodeSphere</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--muted">
+    <div class="container center">
+      <p class="eyebrow">For employers</p>
+      <h2>Build your team with Internhub.</h2>
+      <p class="text-muted" style="max-width:520px;margin:0 auto 1.5rem">Reach students and early-career talent actively looking for their next role.</p>
+      <div class="hero-ctas" style="justify-content:center">
+        <a class="btn btn-primary" href="register.html">Post a job</a>
+        <a class="btn btn-outline" href="register.html">Find candidates</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="faq-heading">
+    <div class="container" style="max-width:760px">
+      <div class="section-head section-head--center">
+        <p class="eyebrow">Questions</p>
+        <h2 id="faq-heading">Frequently asked</h2>
+      </div>
+      <details class="faq-item"><summary>How does Internhub work?</summary><p>Search jobs and internships, apply directly, and track your application status from your dashboard.</p></details>
+      <details class="faq-item"><summary>Can students apply for internships?</summary><p>Yes. Create a student account and apply to any listed internship for free.</p></details>
+      <details class="faq-item"><summary>Can companies post jobs?</summary><p>Yes. Register as an employer, set up a company profile, and post jobs or internships.</p></details>
+      <details class="faq-item"><summary>How can I track applications?</summary><p>Your dashboard shows every application and its current status, from Applied to Selected.</p></details>
+      <details class="faq-item"><summary>Is Internhub free for students?</summary><p>Yes, browsing and applying is completely free for students.</p></details>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="background:var(--color-ink);border-radius:var(--radius-lg);padding:3.5rem 2rem;text-align:center">
+        <h2 style="color:#fff">Your next opportunity starts here.</h2>
+        <a class="btn btn-on-dark" href="jobs.html">Start exploring</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/jobcard.js"></script>
+<script src="js/main.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("categories-grid").innerHTML = CATEGORIES.map((c) => `
+      <a class="category-card" href="jobs.html?category=${encodeURIComponent(c.name)}">
+        <div class="icon">◆</div>
+        <h3>${c.name}</h3>
+        <span>${c.count} open roles</span>
+      </a>`).join("");
+
+    const jobs = JOBS.filter((j) => !j.isInternship).slice(0, 3);
+    const interns = JOBS.filter((j) => j.isInternship).slice(0, 3);
+    document.getElementById("featured-jobs").innerHTML = jobs.map(renderJobCard).join("");
+    document.getElementById("featured-internships").innerHTML = interns.map(renderJobCard).join("");
+    bindSaveButtons(document.getElementById("featured-jobs"));
+    bindSaveButtons(document.getElementById("featured-internships"));
+
+    document.getElementById("hero-search-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const search = document.getElementById("hero-search").value.trim();
+      const location = document.getElementById("hero-location").value;
+      const qs = setParams({ search, location });
+      window.location.href = `jobs.html${qs ? "?" + qs : ""}`;
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+/* Fine-tuning across breakpoints; component files hold most rules already. */
+
+@media (max-width: 1200px) {
+  .container { padding: 0 1.25rem; }
+}
+
+@media (max-width: 992px) {
+  .jobs-layout { grid-template-columns: 220px 1fr; }
+}
+
+@media (max-width: 768px) {
+  .jobs-layout { grid-template-columns: 1fr; }
+  .filter-panel { display: none; }
+  .filter-panel.is-open { display: block; margin-bottom: 1.5rem; }
+  .mobile-filter-toggle { display: inline-flex; }
+  .section { padding: 3rem 0; }
+  .job-details-layout { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 769px) {
+  .mobile-filter-toggle { display: none; }
+}
+
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-visual { max-width: 360px; margin: 0 auto; order: -1; }
+  .stat-band { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 576px) {
+  .hero { padding: 2.5rem 0 0; }
+  .hero-ctas .btn { width: 100%; }
+  .form-card { padding: 1.5rem; }
+  .footer-legal { flex-direction: column; gap: 0.4rem; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.9rem; }
+  .dash-stats { grid-template-columns: 1fr 1fr; }
+}

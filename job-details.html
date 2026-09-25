@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Internhub | Job Details</title>
+<meta name="description" content="View full job details and apply on Internhub." />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/navbar.css" />
+<link rel="stylesheet" href="css/footer.css" />
+<link rel="stylesheet" href="css/hero.css" />
+<link rel="stylesheet" href="css/cards.css" />
+<link rel="stylesheet" href="css/forms.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body data-page="job-details">
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <div class="container" style="padding-top:1.75rem">
+    <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="jobs.html">Jobs</a><span>/</span>Details</nav>
+  </div>
+
+  <div id="job-details-root">
+    <div class="container job-details-layout" style="display:grid;grid-template-columns:2fr 1fr;gap:2.5rem;padding-bottom:4rem">
+      <article>
+        <div style="display:flex;gap:1rem;align-items:center;margin-bottom:1.5rem">
+          <span class="logo-chip" id="job-logo" style="width:56px;height:56px;font-size:1.2rem"></span>
+          <div>
+            <h1 id="job-title" style="margin-bottom:0.2rem"></h1>
+            <p class="text-muted" id="job-company" style="margin:0"></p>
+          </div>
+        </div>
+        <div class="job-card-meta" style="margin-bottom:2rem">
+          <span class="badge" id="job-type-badge"></span>
+          <span id="job-experience"></span>
+          <span id="job-salary"></span>
+          <span id="job-posted"></span>
+        </div>
+
+        <section aria-labelledby="desc-h"><h2 id="desc-h">Job description</h2><p id="job-description"></p></section>
+        <section aria-labelledby="skills-h"><h2 id="skills-h">Skills</h2><div class="job-card-skills" id="job-skills"></div></section>
+        <section aria-labelledby="resp-h"><h2 id="resp-h">Responsibilities</h2><ul id="job-responsibilities"></ul></section>
+        <section aria-labelledby="req-h"><h2 id="req-h">Requirements</h2><ul id="job-requirements"></ul></section>
+        <section aria-labelledby="ben-h"><h2 id="ben-h">Benefits</h2><ul id="job-benefits"></ul></section>
+      </article>
+
+      <aside>
+        <div class="dash-panel">
+          <p class="text-muted" style="font-size:0.85rem;margin-bottom:1rem">Application deadline: <strong id="job-deadline"></strong></p>
+          <div id="apply-panel">
+            <button type="button" id="apply-btn" class="btn btn-primary btn-block">Apply now</button>
+            <div id="apply-form-wrap" hidden style="margin-top:1rem">
+              <form id="apply-form">
+                <div class="field">
+                  <label for="resume-url">Resume URL</label>
+                  <input type="url" id="resume-url" placeholder="https://drive.google.com/..." required />
+                </div>
+                <div class="field">
+                  <label for="cover-letter">Cover letter</label>
+                  <textarea id="cover-letter" placeholder="Tell the employer why you're a fit" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit application</button>
+              </form>
+            </div>
+          </div>
+          <button type="button" id="save-job-btn" class="btn btn-outline btn-block" style="margin-top:0.75rem">Save job</button>
+        </div>
+
+        <div class="dash-panel">
+          <h3 id="company-name-side"></h3>
+          <p class="text-muted" style="font-size:0.85rem" id="company-industry-side"></p>
+          <p style="font-size:0.9rem" id="company-desc-side"></p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/jobcard.js"></script>
+<script src="js/main.js"></script>
+<script src="js/job-details.js"></script>
+</body>
+</html>
